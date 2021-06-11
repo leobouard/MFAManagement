@@ -358,12 +358,6 @@ function Update-MFAUserInterface {
     $xamGUI.LayoutTransform | Out-Null
 }
 
-function Get-MFAHelp {
-
-    Start-Process "https://www.microsoft.com/security/business/identity-access-management/mfa-multi-factor-authentication"
-
-}
-
 function Reset-MFAInterface {
 
     $labelDisplayName.Content     = "User information"
@@ -463,7 +457,7 @@ function Get-MFAManagementUI {
     })
 
     $buttonHelp.Add_Click({
-        Get-MFAHelp
+        Start-Process "https://www.microsoft.com/security/business/identity-access-management/mfa-multi-factor-authentication"
     })
 
     $buttonClearSearch.Add_Click({
@@ -492,5 +486,4 @@ function Get-MFAManagementUI {
     })
 
     Show-MFAUserInterface
-
 }
